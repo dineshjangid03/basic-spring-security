@@ -32,6 +32,7 @@ public class WebSecurityConfig {
 
 	@Bean
 	public UserDetailsService userDetailsService() {
+		
 		UserDetails user =
 			 User.withDefaultPasswordEncoder()
 				.username("user")
@@ -40,5 +41,6 @@ public class WebSecurityConfig {
 				.build();
 
 		return new InMemoryUserDetailsManager(user);
+		
 	}
 }
